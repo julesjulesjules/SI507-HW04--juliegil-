@@ -11,6 +11,8 @@ eightball_answers = ["It is certain", "It is decidedly so", "Without a doubt", "
 print("Welcome to the Magic Eight Ball game!")
 print("Enter quit to exit")
 
+person_q = ""
+
 while person_q.lower() != "quit": 
   person_q = input("What is your question?")
   while "?" not in person_q: 
