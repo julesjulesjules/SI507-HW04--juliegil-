@@ -13,14 +13,17 @@ print("Enter quit to exit")
 
 person_q = ""
 
-while person_q.lower() != "quit": 
-  
-  person_q = input("What is your question? ")
-  if person_q.lower() == "quit":
-    print("Sorry to see you go.")
-    break
-  if "?" not in person_q: 
-    while "?" not in person_q:
-      person_q = input("I'm sorry, I can only answer questions... Please try again: ")
-  
-  print(random.choice(eightball_answers))
+while person_q.lower() != "quit":
+
+    person_q = input("What is your question? ")
+    if "?" not in person_q and person_q.lower() != "quit":
+        while "?" not in person_q:
+            person_q = input("I'm sorry, I can only answer questions... Please try again: ")
+        print(random.choice(eightball_answers))
+    elif person_q.lower() == "quit":
+        print("Sorry to see you go!")
+    else:
+        print(random.choice(eightball_answers))
+
+print("Bye!")
+
